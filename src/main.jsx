@@ -15,18 +15,19 @@ import UpdateCoffee from './components/UpdateCoffee.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: MainLayout,
+    Component: MainLayout,
     children: [
       {
         index: true,
+        path: '/',
         Component: Home,
       },
       {
-        path: 'addCoffee',
+        path: '/addCoffee',
         Component: AddCoffee,
       },
       {
-        path: 'updateCoffee',
+        path: '/updateCoffee',
         Component: UpdateCoffee,
       }
     ]
@@ -35,6 +36,6 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+     <RouterProvider router={router} />
   </StrictMode>,
 )
