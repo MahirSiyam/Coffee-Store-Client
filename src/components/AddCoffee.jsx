@@ -11,6 +11,8 @@ const AddCoffee = () => {
     const newCoffee = Object.fromEntries(formData.entries());
     console.log(newCoffee);
 
+    form.reset();
+
     // send coffee data to the db
 
     fetch("http://localhost:3000/coffees", {
